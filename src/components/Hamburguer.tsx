@@ -1,5 +1,4 @@
-import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { MdMenu, MdOutlineClose } from "react-icons/md";
 
 interface HamburguerProps {
   isMenuOpen: boolean;
@@ -12,11 +11,7 @@ const Hamburguer = ({ isMenuOpen, setIsMenuOpen }: HamburguerProps) => {
   return (
     <div className="">
       <button onClick={handleSetMenuClick}>
-        {!isMenuOpen ? (
-          <FontAwesomeIcon icon={faBars} size="xl" color="white" />
-        ) : (
-          <FontAwesomeIcon icon={faX} size="xl" color="white" />
-        )}
+        {!isMenuOpen ? <MdMenu size={20} /> : <MdOutlineClose size={20} />}
       </button>
     </div>
   );

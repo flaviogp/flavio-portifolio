@@ -7,7 +7,11 @@ export default {
       "secondary-color": "#2E2F34",
       "primary-text-color": "#D8A260"
     },
-    extend: {},
+    extend: {
+      transitionProperty: {
+        width: "width"
+      }
+    },
   },
   plugins: [],
 }
