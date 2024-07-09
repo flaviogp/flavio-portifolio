@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa";
+import Container from "./Container";
 
 const About = () => {
   const [revealIntroduction, setRevealIntroduction] = useState(false);
@@ -7,7 +8,7 @@ const About = () => {
   const handleReadMore = () => setRevealIntroduction(!revealIntroduction);
 
   return (
-    <section className="text-primary-text-color flex flex-col items-center space-y-14 p-5 bg-secondary-color">
+    <Container bg="secondary">
       <div className=" flex flex-col space-y-4 items-center">
         <div>
           <h1 className="font-bold text-6xl">
@@ -67,7 +68,7 @@ const About = () => {
           )}
         </div>
       </div>
-    </section>
+    </Container>
   );
 };
 
