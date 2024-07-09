@@ -35,7 +35,7 @@ const About = () => {
         <h2 className="font-bold text-2xl">Web Developer</h2>
         <div className="flex flex-col">
           <p
-            className={` overflow-hidden ${
+            className={` overflow-hidden transition-height ${
               revealIntroduction ? "h-max" : "h-[100px]"
             }`}
           >
