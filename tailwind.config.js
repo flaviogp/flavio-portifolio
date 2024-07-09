@@ -5,7 +5,8 @@ export default {
     colors: {
       "primary-color": "#33353A",
       "secondary-color": "#2E2F34",
-      "primary-text-color": "#D8A260"
+      "primary-text-color": "#FFFFFF",
+      "secondary-text-color": "#D8A260"
     },
     extend: {
       transitionProperty: {
