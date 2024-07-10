@@ -10,7 +10,7 @@ const Container = ({ bg, children }: ContainerProps) => {
     <section
       className={`
             text-primary-text-color flex flex-col 
-            items-center space-y-14 p-5 
+            items-center space-y-14 px-5 py-10
             ${bg === "secondary" ? "bg-secondary-color" : "bg-primary-color"}
         `}
     >

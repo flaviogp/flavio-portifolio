@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa";
-import Container from "./Container";
+import Container from "../Container";
 
 const About = () => {
   const [revealIntroduction, setRevealIntroduction] = useState(false);
