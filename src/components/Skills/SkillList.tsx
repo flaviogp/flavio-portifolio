@@ -41,7 +41,7 @@ const SkillList = ({ category }: SkillListProps) => {
   return (
     <div className="w-[90vw] flex gap-4 overflow-x-scroll [&::-webkit-scrollbar]:hidden">
       {skill.map((skill) => (
-        <SkillItem title={skill.name.toLowerCase()} key={skill.name} />
+        <SkillItem title={skill.name} key={skill.name} />
       ))}
     </div>
   );

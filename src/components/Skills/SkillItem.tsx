@@ -6,7 +6,7 @@ interface SkillItemProps {
 
 const SkillItem = ({ title }: SkillItemProps) => {
   const handleIconChoice = (icon: string) => {
-    const img = selectIcon(icon);
+    const img = selectIcon(icon.toLowerCase());
     return img;
   };
 
