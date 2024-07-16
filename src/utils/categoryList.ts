@@ -1,4 +1,4 @@
-type Skill = {
+export type Skill = {
     name: string;
     descrition: string;
     documentation: string | null;
