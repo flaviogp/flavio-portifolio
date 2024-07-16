@@ -1,50 +1,48 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import * as C from "../../utils/categoryList";
 import SkillItem from "./SkillItem";
 
-type role =
-  | "backend"
-  | "frontend"
-  | "languages"
-  | "libsAndFrameworks"
-  | "tools"
-  | null;
+interface SkillListProps {
+  category: string;
+}
 
-const SkillList = () => {
-  const [isOpenSkillList, setisOpenSkillList] = useState<role>(null);
+const SkillList = ({ category }: SkillListProps) => {
+  const [skill, setSkill] = useState<C.Skill[]>([]);
 
-  const handleClick = (role: role) => {
-    setisOpenSkillList(role);
-  };
+  useEffect(() => {
+    const handleReturnSkillList = (): C.Skill[] => {
+      let skill;
+      switch (category) {
+        case "languages":
+          skill = C.languages;
+          break;
+        case "frontend":
+          skill = C.frontend;
+          break;
+
+        case "backend":
+          skill = C.backend;
+          break;
+
+        case "tools":
+          skill = C.tools;
+          break;
+
+        case "libsAndFrameworks":
+          skill = C.libsAndFrameworks;
+          break;
+      }
+
+      return skill as C.Skill[];
+    };
+    setSkill(handleReturnSkillList());
+  }, [setSkill, category]);
 
   return (
     <div className="w-[90vw] flex gap-4 overflow-x-scroll [&::-webkit-scrollbar]:hidden">
-      {!isOpenSkillList ? (
-        <>
-          <SkillItem
-            title="Languages"
-            role="languages"
-            handleClick={handleClick}
-          />
-          <SkillItem
-            title="Front End"
-            role="frontend"
-            handleClick={handleClick}
-          />
-          <SkillItem
-            title="Back End"
-            role="backend"
-            handleClick={handleClick}
-          />
-          <SkillItem
-            title="Libraries and Frameworks"
-            role="libsAndFrameworks"
-            handleClick={handleClick}
-          />
-          <SkillItem title="Tools" role="tools" handleClick={handleClick} />
-        </>
-      ) : (
-        <div></div>
-      )}
+      {skill.map((skill) => (
+        <SkillItem title={skill.name.toLowerCase()} key={skill.name} />
+      ))}
     </div>
   );
 };
