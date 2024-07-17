@@ -1,11 +1,13 @@
 import { useState } from "react";
+
+import SkillList from "./SkillList";
 import Container from "../Container";
 import CategorySkillList from "./CategorySkillList";
+
 import { role } from "../../utils/types";
-import SkillList from "./SkillList";
 
 const Skills = () => {
-  const [isOpenSkillList, setisOpenSkillList] = useState<role>(null);
+  const [isOpenSkillList, setIsOpenSkillList] = useState<role>(null);
 
   return (
     <Container>
@@ -15,9 +17,12 @@ const Skills = () => {
         </h2>
         <h3 className="font-bold text-2xl">Quais skills eu possuo</h3>
         {!isOpenSkillList ? (
-          <CategorySkillList setisOpenSkillList={setisOpenSkillList} />
+          <CategorySkillList setisOpenSkillList={setIsOpenSkillList} />
         ) : (
-          <SkillList category={isOpenSkillList} />
+          <SkillList
+            category={isOpenSkillList}
+            setIsOpenSkillList={setIsOpenSkillList}
+          />
         )}
       </div>
     </Container>

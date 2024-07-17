@@ -14,8 +14,8 @@ const CategoryItem = ({ title, role, handleClick }: CategoryItemProps) => {
   };
 
   return (
-    <button
-      className=" bg-secondary-color p-3 rounded-xl flex flex-col justify-between items-center space-y-3 min-w-32 h-48"
+    <a
+      className=" bg-secondary-color p-3 rounded-xl flex flex-col justify-between items-center space-y-3 min-w-32 h-48 cursor-pointer"
       onClick={() => handleClick(role)}
     >
       <h3 className="font-bold">{title}</h3>
@@ -26,7 +26,7 @@ const CategoryItem = ({ title, role, handleClick }: CategoryItemProps) => {
           className="object-cover max-h-24 max-w-24"
         />
       </div>
-    </button>
+    </a>
   );
 };
 
