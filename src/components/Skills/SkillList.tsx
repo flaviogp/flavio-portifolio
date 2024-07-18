@@ -20,9 +20,9 @@ const SkillList = ({ category, setIsOpenSkillList }: SkillListProps) => {
     string | null
   >(null);
 
-  const handleIconChoice = (icon: string) => {
+  const handleIconChoice = (icon: string): string => {
     const img = selectIcon(icon.toLowerCase());
-    return img;
+    return img ? img : "";
   };
 
   const handleShowDescription = (skill: string | null) => {
@@ -67,27 +67,33 @@ const SkillList = ({ category, setIsOpenSkillList }: SkillListProps) => {
 
   return (
     <div className="flex flex-col space-y-4">
-      <button className="w-10 h-10" onClick={() => setIsOpenSkillList(null)}>
-        <FaRegArrowAltCircleLeft
-          className="text-secondary-text-color"
-          size={30}
-        />
-      </button>
       {!isDescriptionAppears ? (
-        <div className="w-[90vw] flex justify-center gap-4 overflow-x-scroll [&::-webkit-scrollbar]:hidden">
-          {skill.map((skill) => (
-            <SkillItem
-              title={skill.name}
-              key={skill.name}
-              handleShowDescription={handleShowDescription}
-              handleIconChoice={handleIconChoice}
+        <>
+          <button
+            className="w-10 h-10"
+            onClick={() => setIsOpenSkillList(null)}
+          >
+            <FaRegArrowAltCircleLeft
+              className="text-secondary-text-color"
+              size={30}
             />
-          ))}
-        </div>
+          </button>
+          <div className="w-[90vw] flex justify-center gap-4 overflow-x-scroll [&::-webkit-scrollbar]:hidden">
+            {skill.map((skill) => (
+              <SkillItem
+                title={skill.name}
+                key={skill.name}
+                handleShowDescription={handleShowDescription}
+                handleIconChoice={handleIconChoice}
+              />
+            ))}
+          </div>
+        </>
       ) : (
         <SkillDescription
           skill={handlegetSkill()}
           handleIconChoice={handleIconChoice}
+          setIsdescriptionAppears={setIsdescriptionAppears}
         />
       )}
     </div>

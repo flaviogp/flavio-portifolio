@@ -8,7 +8,6 @@ import { role } from "../../utils/types";
 
 const Skills = () => {
   const [isOpenSkillList, setIsOpenSkillList] = useState<role>(null);
-
   return (
     <Container>
       <div className="flex flex-col space-y-4 items-center text-center">
