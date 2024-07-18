@@ -1,7 +1,7 @@
 
 export type Skill = {
   name: string;
-  descrition: string;
+  description: string;
   documentation: string | null;
 }
 
