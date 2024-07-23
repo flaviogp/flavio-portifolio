@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Header from "./components/Header";
+import Portifolio from "./components/Portifolio";
 import Skills from "./components/Skills";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <About />
       <Skills />
+      <Portifolio />
     </>
   );
 }
