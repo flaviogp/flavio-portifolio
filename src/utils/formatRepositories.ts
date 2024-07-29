@@ -1,10 +1,10 @@
 import { githubRepository, repository } from "./types"
 
-const formatRepositories = (data: githubRepository[] ): repository[] => {
+const formatRepositories = (data: githubRepository[]): repository[] => {
 
     const formatData: repository[] = []
 
-    data.map(repo => {
+        data.map(repo => {
         const formatRepo = {
             id: repo.id,
             name: repo.name,
@@ -15,7 +15,6 @@ const formatRepositories = (data: githubRepository[] ): repository[] => {
 
         formatData.push(formatRepo)
     })
-
 
     return formatData
 } 
