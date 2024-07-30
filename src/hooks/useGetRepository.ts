@@ -15,7 +15,7 @@ export const useGetRepository = (user: string, repo: string): repository => {
             });
         const repositoryFormated = formatRepository(repository)
         setRepositoryFormated(repositoryFormated)
-    }, [user, repo]);
+    }, [user, repo, repository]);
 
     return repositoryFormated
 
