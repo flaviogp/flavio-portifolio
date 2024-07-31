@@ -14,9 +14,16 @@ export type role =
   | "tools"
   | null;
 
+export type contact = {
+  id: number,
+  name?: string,
+  type: string,
+  value: string,
+}
+
 
 export type repository = {
-  id:number
+  id: number
   name: string,
   html_url: string,
   created_at: string,
@@ -35,7 +42,7 @@ export type githubRepository = {
     id: string,
     node_id: string,
     avatar_url: string,
-    gravatar_id: string ,
+    gravatar_id: string,
     url: string,
     html_url: string,
     followers_url: string,

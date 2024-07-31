@@ -12,7 +12,7 @@ const formatRepositoryName = (name: string) => {
 
 const RepositoryItem = ({ repository }: RepositoryItemProps) => {
   return (
-    <div className="w-40 h-48 flex flex-col items-center justify-between p-4 border border-secondary-text-color rounded-xl">
+    <div className="min-w-32 h-48 flex flex-col items-center justify-between p-4 border border-secondary-text-color rounded-xl">
       <div>
         <p className="font-semibold text-secondary-text-color">Projeto:</p>
         <p className="capitalize">{formatRepositoryName(repository.name)}</p>
@@ -24,7 +24,7 @@ const RepositoryItem = ({ repository }: RepositoryItemProps) => {
       <div>
         <p className="font-semibold text-secondary-text-color">Acesse:</p>
         <a href={repository.html_url} target="_blank">
-          clique aqui
+          Clique aqui
         </a>
       </div>
     </div>
