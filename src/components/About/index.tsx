@@ -9,7 +9,7 @@ const About = () => {
 
   return (
     <Container bg="secondary">
-      <div className=" flex flex-col space-y-4 items-center">
+      <div className=" flex flex-col space-y-4 items-center" id="about">
         <div>
           <h1 className="font-bold text-6xl">
             Flavio <br /> Gomes{" "}

@@ -9,7 +9,10 @@ const Portifolio = () => {
   // const repository = useGetRepository("flaviogp", "addison-global-1");
   return (
     <Container bg={"secondary"}>
-      <div className="flex flex-col space-y-4 items-center text-center">
+      <div
+        id="portifolio"
+        className="flex flex-col space-y-4 items-center text-center"
+      >
         <h2 className="text-secondary-text-color font-semibold uppercase text-sm">
           Portifolio
         </h2>

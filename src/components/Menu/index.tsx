@@ -4,23 +4,18 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const MenuOpenStyles = ` w-[50vw] px-5
-    `;
-
-  const MenuCloseStyles = `w-0 overflow-hidden`;
-
   return (
     <div>
       <Hamburguer isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <nav
-        className={`py-5 transition-width delay-75 bg-secondary-color h-[100vh] absolute right-0 top-0 flex flex-col items-center gap-6 ${
-          isMenuOpen ? MenuOpenStyles : MenuCloseStyles
+        className={`py-5 transition-height delay-75 bg-secondary-color w-full h-full absolute right-0  flex flex-col items-center gap-6 ${
+          isMenuOpen ? "top-0" : "-top-full"
         }`}
       >
-        <div className="flex w-full justify-end">
+        <div className="flex w-full justify-end px-5 ">
           <Hamburguer isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         </div>
-        <menu className="flex flex-col w-full items-center font-bold py-6 gap-5 text-[white] border-b">
+        <menu className="flex flex-col w-full items-center font-bold py-6 gap-5 text-[white] ">
           <li>
             <a href="#">Home</a>
           </li>
@@ -36,6 +31,7 @@ function Menu() {
           <li>
             <a href="">Contact</a>
           </li>
+          <li className="border-b border-primary-text-color h-1 w-[50%]"></li>
         </menu>
         <ul className="flex gap-6">
           <li>

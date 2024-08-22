@@ -10,7 +10,10 @@ const Skills = () => {
   const [isOpenSkillList, setIsOpenSkillList] = useState<role>(null);
   return (
     <Container>
-      <div className="flex flex-col space-y-4 items-center text-center">
+      <div
+        className="flex flex-col space-y-4 items-center text-center"
+        id="skills"
+      >
         <h2 className="text-secondary-text-color font-semibold uppercase text-sm">
           Skills
         </h2>
