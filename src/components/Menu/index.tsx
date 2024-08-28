@@ -8,9 +8,14 @@ function Menu() {
     <div>
       <Hamburguer isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <nav
-        className={`py-5 transition-height delay-75 bg-secondary-color w-full h-full absolute right-0  flex flex-col items-center gap-6 ${
-          isMenuOpen ? "top-0" : "-top-full"
-        }`}
+        className={`
+          flex flex-col items-center gap-6 py-5 
+          transition-width delay-75 overflow-hidden
+          bg-secondary-color h-screen 
+          absolute right-0 top-0 
+          ${isMenuOpen ? "w-screen" : "w-0 "}
+          
+        `}
       >
         <div className="flex w-full justify-end px-5 ">
           <Hamburguer isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
@@ -20,16 +25,16 @@ function Menu() {
             <a href="#">Home</a>
           </li>
           <li>
-            <a href="">Portifolio</a>
+            <a href="#portifolio">Portifolio</a>
           </li>
+          {/* <li>
+            <a href="#blog">Blog</a>
+          </li> */}
+          {/* <li>
+            <a href="#pages">Pages</a>
+          </li> */}
           <li>
-            <a href="">Blog</a>
-          </li>
-          <li>
-            <a href="">Pages</a>
-          </li>
-          <li>
-            <a href="">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
           <li className="border-b border-primary-text-color h-1 w-[50%]"></li>
         </menu>
