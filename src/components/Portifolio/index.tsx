@@ -1,8 +1,9 @@
 import { useGetRepositories } from "../../hooks/useGetRepositories";
 // import { useGetRepository } from "../../hooks/useGetRepository";
 import Container from "../Container";
-import RepositoryItem from "./RepositoryItem";
-import RepositoryList from "./RepositoryList";
+import Gallery from "../Gallery";
+// import RepositoryItem from "./RepositoryItem";
+// import RepositoryList from "./RepositoryList";
 
 const Portifolio = () => {
   const repositories = useGetRepositories("flaviogp");
@@ -17,11 +18,14 @@ const Portifolio = () => {
           Portifolio
         </h2>
 
+        <Gallery />
+
+        {/* 
         <RepositoryList>
           {repositories.map((repo) => (
             <RepositoryItem key={Number(repo.id)} repository={repo} />
           ))}
-        </RepositoryList>
+        </RepositoryList> */}
       </div>
     </Container>
   );

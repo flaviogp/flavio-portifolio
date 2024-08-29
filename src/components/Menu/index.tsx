@@ -12,7 +12,7 @@ function Menu() {
           flex flex-col items-center gap-6 py-5 
           transition-width delay-75 overflow-hidden
           bg-secondary-color h-screen 
-          absolute right-0 top-0 
+          fixed right-0 top-0
           ${isMenuOpen ? "w-screen" : "w-0 "}
           
         `}
@@ -27,14 +27,8 @@ function Menu() {
           <li>
             <a href="#portifolio">Portifolio</a>
           </li>
-          {/* <li>
-            <a href="#blog">Blog</a>
-          </li> */}
-          {/* <li>
-            <a href="#pages">Pages</a>
-          </li> */}
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact">Contatos</a>
           </li>
           <li className="border-b border-primary-text-color h-1 w-[50%]"></li>
         </menu>
