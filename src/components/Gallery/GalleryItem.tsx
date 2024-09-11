@@ -8,6 +8,7 @@ const GalleryItem = ({ link, url }: GalleryItemProps) => {
     <a
       href={link}
       className="w-full h-full sticky left-0 shrink-0  scroll-smooth"
+      target="_blank"
     >
       <img src={url} alt="" className="w-full h-full object-cover" />
     </a>
